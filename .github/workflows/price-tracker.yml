@@ -21,6 +21,16 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Debug fetch
+        run: |
+          curl -s -o response.html -w "HTTP %{http_code}, %{size_download} bytes\n" \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
+            "https://www.trendyol.com/english-home/tmk-5030-izgara-ve-tost-makinesi-inox-p-872054885?boutiqueId=61"
+          head -c 1000 response.html
+          echo ""
+          echo "---JSON-LD count---"
+          grep -o "application/ld+json" response.html | wc -l
+
       - name: Check prices and stock
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
