@@ -27,6 +27,10 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python tracker.py
 
+      - name: Show log
+        if: always()
+        run: cat tracker.log
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
