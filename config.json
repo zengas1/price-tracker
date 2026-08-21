@@ -1,0 +1,32 @@
+{
+  "telegram": {
+    "bot_token": "",
+    "chat_id": ""
+  },
+  "products": [
+    {
+      "name": "English Home TMK 5030 Izgara ve Tost Makinesi",
+      "url": "https://www.trendyol.com/english-home/tmk-5030-izgara-ve-tost-makinesi-inox-p-872054885?boutiqueId=61",
+      "price_selector": null,
+      "stock_selector": null
+    },
+    {
+      "name": "Altus Al 2213 S Tost Makinesi",
+      "url": "https://www.trendyol.com/altus/al-2213-s-tost-makinesi-p-776126609",
+      "price_selector": null,
+      "stock_selector": null
+    },
+    {
+      "name": "Elitcam 4 Kameralı Uzay Süper 4 Dış Kamera Set 250 GB 5 MP 2K Net Gece Görüşlü Güvenlik Kamerası Sistemi",
+      "url": "https://www.trendyol.com/elitcam/4-kamerali-uzay-super-4-dis-kamera-set-250-gb-5-mp-2k-net-gece-goruslu-guvenlik-kamerasi-sistemi-p-100486576?boutiqueId=61&merchantId=671106",
+      "price_selector": null,
+      "stock_selector": null
+    },
+    {
+      "name": "Apphirex REBİRTH X58 Ryzen 5 5500 | 16GB RAM | 512GB M2 SSD | RX580 8GB | Sıvı Soğutmalı Oyuncu Bilgisayarı",
+      "url": "https://www.trendyol.com/apphirex/rebirth-x58-ryzen-5-5500-16gb-ram-512gb-m2-ssd-rx580-8gb-sivi-sogutmali-oyuncu-bilgisayari-p-1110457298?boutiqueId=61&merchantId=212612",
+      "price_selector": null,
+      "stock_selector": null
+    }
+  ]
+}
