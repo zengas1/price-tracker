@@ -1,8 +1,12 @@
 name: Link Listener
 
+# NOT: Trendyol, GitHub Actions'ın (ve genel olarak çoğu bulut/datacenter IP'sinin)
+# isteklerini "blocked malicious bot" diyerek 403 ile reddediyor (Cloudflare bot
+# koruması). Bu yuzden zamanlanmis (schedule) tetikleyici kapali birakildi -
+# script Trendyol sayfasini gercekte cekemiyor. Kod referans/yedek olarak
+# duruyor; calistirmak icin workflow_dispatch ile elle tetikleyebilirsin.
+
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:

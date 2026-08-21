@@ -1,8 +1,13 @@
 name: Price Tracker
 
+# NOT: Trendyol, GitHub Actions'ın (ve genel olarak çoğu bulut/datacenter IP'sinin)
+# isteklerini "blocked malicious bot" diyerek 403 ile reddediyor (Cloudflare bot
+# koruması). Bu yuzden zamanlanmis (schedule) tetikleyici kapali birakildi -
+# script gercekte calisip veri cekemiyor. Kod referans/yedek olarak duruyor;
+# calistirmak icin workflow_dispatch ile elle tetikleyebilirsin (Trendyol disinda,
+# bot korumasi olmayan bir site icin isine yarayabilir).
+
 on:
-  schedule:
-    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,28 +26,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Debug fetch
-        run: |
-          curl -sL -o response.html -D headers.txt -w "HTTP %{http_code}, %{size_download} bytes, %{url_effective}\n" \
-            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
-            "https://www.trendyol.com/english-home/tmk-5030-izgara-ve-tost-makinesi-inox-p-872054885?boutiqueId=61"
-          echo "---headers---"
-          cat headers.txt
-          echo "---body head---"
-          head -c 1500 response.html
-          echo ""
-          echo "---JSON-LD count---"
-          grep -o "application/ld+json" response.html | wc -l
-
       - name: Check prices and stock
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python tracker.py
-
-      - name: Show log
-        if: always()
-        run: cat tracker.log
 
       - name: Commit and push changes
         run: |

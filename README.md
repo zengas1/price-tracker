@@ -75,7 +75,11 @@ Enable-ScheduledTask -TaskName "<GOREV_ADI>"
 Unregister-ScheduledTask -TaskName "<GOREV_ADI>" -Confirm:$false
 ```
 
+## Neden bulutta değil de yerelde çalışıyor?
+
+Bunu GitHub Actions'a (ücretsiz bulut) taşımayı denedik, ancak Trendyol GitHub'ın sunucu IP'lerini `blocked malicious bot` diyerek 403 ile reddediyor (Cloudflare bot koruması). Bu, sadece Trendyol'a özgü değil — çoğu büyük e-ticaret sitesi datacenter IP'lerini bu şekilde engeller. Kendi ev bağlantından gelen istekler bot olarak işaretlenmediği için yerelde sorunsuz çalışıyor. `.github/workflows/` altındaki dosyalar referans olarak duruyor (bot koruması olmayan bir site için elle tetiklenebilir) ama otomatik zamanlanmış çalışmıyorlar.
+
 ## Notlar
 
-- Bazı siteler (özellikle JavaScript ile içerik yükleyenler, örn. Trendyol'un bazı sayfaları) düz `requests` ile fiyatı göstermeyebilir. Böyle bir durumda karşılaşırsak Playwright tabanlı bir sürüme geçebiliriz.
+- Bazı siteler (özellikle JavaScript ile içerik yükleyenler) düz `requests` ile fiyatı göstermeyebilir. Böyle bir durumda karşılaşırsak Playwright tabanlı bir sürüme geçebiliriz.
 - Bu araç kişisel kullanım için tasarlandı. Başkalarına açık bir servise dönüştürmeden önce hedef sitelerin kullanım şartlarını kontrol et.
