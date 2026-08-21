@@ -23,10 +23,13 @@ jobs:
 
       - name: Debug fetch
         run: |
-          curl -s -o response.html -w "HTTP %{http_code}, %{size_download} bytes\n" \
+          curl -sL -o response.html -D headers.txt -w "HTTP %{http_code}, %{size_download} bytes, %{url_effective}\n" \
             -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
             "https://www.trendyol.com/english-home/tmk-5030-izgara-ve-tost-makinesi-inox-p-872054885?boutiqueId=61"
-          head -c 1000 response.html
+          echo "---headers---"
+          cat headers.txt
+          echo "---body head---"
+          head -c 1500 response.html
           echo ""
           echo "---JSON-LD count---"
           grep -o "application/ld+json" response.html | wc -l
