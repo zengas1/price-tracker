@@ -18,7 +18,7 @@ from pathlib import Path
 
 KOK = Path(__file__).resolve().parent.parent
 HIZ = "-10%"  # yaşlıca, ağır bir anlatım için biraz yavaş
-DENEME = 4    # servis ara sıra "NoAudioReceived" döndürür; beklemeli yeniden dene
+DENEME = 6    # servis ara sıra "NoAudioReceived" döndürür; beklemeli yeniden dene
 
 
 async def uret(metin, ses, hedef):
