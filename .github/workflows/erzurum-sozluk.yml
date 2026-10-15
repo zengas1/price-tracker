@@ -35,12 +35,15 @@ jobs:
         run: pip install edge-tts qrcode
 
       - name: Generate audio
+        id: ses
+        continue-on-error: true
         run: python erzurum-sozluk/tools/ses_uret.py ${{ inputs.force && '--force' || '' }}
 
       - name: Generate QR codes
         run: python erzurum-sozluk/tools/qr_uret.py
 
       - name: Commit and push changes
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -50,3 +53,9 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      - name: Fail if some audio is missing
+        if: steps.ses.outcome == 'failure'
+        run: |
+          echo "Bazi ses dosyalari uretilemedi; is akisini tekrar calistirinca yalnizca eksikler denenir."
+          exit 1
