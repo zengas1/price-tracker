@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erzurum Yaşayan Sözlük</title>
+  <meta name="description" content="Erzurum yöresinden 30 atasözü ve deyim; şiveli söyleyişi, anlamı, kadın ve erkek sesiyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-sayfa="liste">
+  <main class="kap">
+    <header class="ust">
+      <h1 class="ust-baslik">Erzurum Yaşayan Sözlük</h1>
+      <p>Erzurum yöresinden 30 atasözü ve deyim. Bir söze dokun; şivesiyle bir kadın ve bir erkek söylesin, anlamını anlatsın.</p>
+    </header>
+
+    <div class="arac">
+      <input id="ara" type="search" placeholder="Söz ya da anlam ara… (ör. ğış, komşu)" aria-label="Sözlükte ara">
+      <div class="filtre" role="group" aria-label="Türe göre süz">
+        <button data-tur="hepsi" aria-pressed="true">Hepsi</button>
+        <button data-tur="atasözü" aria-pressed="false">Atasözleri</button>
+        <button data-tur="deyim" aria-pressed="false">Deyimler</button>
+      </div>
+    </div>
+    <p id="sayac" class="not" style="margin:0 0 10px"></p>
+    <ul id="liste" class="liste"></ul>
+
+    <p class="not">
+      <a href="kitapcik.html">QR kartlarını yazdır</a> ·
+      Sesler şimdilik yapay sesle üretilmiştir; Erzurumlu konuşmacıların kayıtlarıyla değiştirilebilir.
+    </p>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

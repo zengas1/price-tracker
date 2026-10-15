@@ -83,3 +83,7 @@ Bunu GitHub Actions'a (ücretsiz bulut) taşımayı denedik, ancak Trendyol GitH
 
 - Bazı siteler (özellikle JavaScript ile içerik yükleyenler) düz `requests` ile fiyatı göstermeyebilir. Böyle bir durumda karşılaşırsak Playwright tabanlı bir sürüme geçebiliriz.
 - Bu araç kişisel kullanım için tasarlandı. Başkalarına açık bir servise dönüştürmeden önce hedef sitelerin kullanım şartlarını kontrol et.
+
+## Erzurum Yaşayan Sözlük
+
+Bu depoda ayrıca QR kodla açılan, kadın ve erkek sesli bir Erzurum atasözü/deyim sözlüğü de bulunuyor: [`erzurum-sozluk/`](erzurum-sozluk/README.md).

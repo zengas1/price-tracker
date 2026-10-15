@@ -1,0 +1,340 @@
+{
+  "baslik": "Erzurum Yaşayan Sözlük",
+  "aciklama": "Erzurum yöresinde söylenen 30 atasözü ve deyim; şiveli söyleyişi, anlamı, kadın ve erkek sesiyle.",
+  "sesler": {
+    "kadin": "tr-TR-EmelNeural",
+    "erkek": "tr-TR-AhmetNeural"
+  },
+  "maddeler": [
+    {
+      "id": "01",
+      "tur": "atasözü",
+      "soz_sive": "Damlaya damlaya göl olir.",
+      "soz_standart": "Damlaya damlaya göl olur.",
+      "anlam": "Küçük birikimler zamanla büyük bir varlık oluşturur.",
+      "ornek": "Her gün bir ğuruş goy kumbaraya; damlaya damlaya göl olir.",
+      "metin_kadin": "Gadanızı alım, bizim oralarda bir söz var: Damlaya damlaya göl olir. Yani azar azar biriktirsen, bir gün bahersen çoh olmuş. Ğızım, oğlum, ğuruşu ğuruşun üstüne goyun, israf etmeyin.",
+      "metin_erkek": "Hele bah dadaş, bizde derler ki: Damlaya damlaya göl olir. Demeh isteyir ki, az az biriktirenin malı bir gün çoğalır. Sabırnan, tutumnan yaşayan ğazanır.",
+      "dogrulandi": false
+    },
+    {
+      "id": "02",
+      "tur": "atasözü",
+      "soz_sive": "Ğonşi ğonşinin külüne muhtacdır.",
+      "soz_standart": "Komşu komşunun külüne muhtaçtır.",
+      "anlam": "İnsanlar en küçük şeyde bile birbirine ihtiyaç duyar; komşuluk korunmalıdır.",
+      "ornek": "Ğonşunun hatırını ğırma; ğonşi ğonşinin külüne muhtacdır.",
+      "metin_kadin": "Bacım, ğonşi dediğin canınnan yahındır. Bizde derler: Ğonşi ğonşinin külüne muhtacdır. Yani en ufah şeyde, bir tutam külde bele birbirimize lazım oluruh. Ğonşunuzu ğırmayın.",
+      "metin_erkek": "Dadaş, ğış uzun, yollar ğarlı; adamın en yahını ğonşisidir. Bizde derler: Ğonşi ğonşinin külüne muhtacdır. Yani ne ğadar varlıhlı olsan da bir gün ğonşuna muhtac olirsen. Ğonşuluğu eyi tutah.",
+      "dogrulandi": false
+    },
+    {
+      "id": "03",
+      "tur": "atasözü",
+      "soz_sive": "Mısafir umduğunu dejil, bulduğunu yer.",
+      "soz_standart": "Misafir umduğunu değil, bulduğunu yer.",
+      "anlam": "Konuk, ev sahibinin imkânı neyse ona razı olur; ev sahibi de elindekini çekinmeden ikram eder.",
+      "ornek": "Ne varsa goy sofraya, utanma; mısafir umduğunu dejil, bulduğunu yer.",
+      "metin_kadin": "Gadan alım, bizim evin ğapısı her zaman açıhtır. Ama bir söz var: Mısafir umduğunu dejil, bulduğunu yer. Yani evde ne varsa, tandırda ne pişmişse onu goyarıh önüne; mısafir da ona şükreder.",
+      "metin_erkek": "Hele gel otur dadaş, utanma. Bizde derler: Mısafir umduğunu dejil, bulduğunu yer. Demeh ki ev sahibi elinde ne varsa ikram eder, gelen de nazlanmaz, ne bulursa yer.",
+      "dogrulandi": false
+    },
+    {
+      "id": "04",
+      "tur": "atasözü",
+      "soz_sive": "Her ğışın bir baharı var.",
+      "soz_standart": "Her kışın bir baharı vardır.",
+      "anlam": "Her zor dönemin ardından iyi günler gelir; umut kesilmemelidir.",
+      "ornek": "Üzülme bacım, her ğışın bir baharı var.",
+      "metin_kadin": "Bizim Erzurum'un ğışı uzun olur bacım, ama bilirsen ne derler? Her ğışın bir baharı var. Yani ne ğadar zor gün görsen de sonunda eyi günler gelecek. Umudunu kesme.",
+      "metin_erkek": "Dadaş, altı ay ğar yağar bizde, ama yine de derih: Her ğışın bir baharı var. Yani dert de ğalmaz, sıhıntı da ğalmaz; sabredenin baharı gelir.",
+      "dogrulandi": false
+    },
+    {
+      "id": "05",
+      "tur": "atasözü",
+      "soz_sive": "Tatlı dil ilanı deliğinnen çıharır.",
+      "soz_standart": "Tatlı dil yılanı deliğinden çıkarır.",
+      "anlam": "Güzel ve yumuşak konuşmayla en zor insan bile ikna edilir.",
+      "ornek": "Bağırma ona; tatlı dil ilanı deliğinnen çıharır.",
+      "metin_kadin": "Gadanı alım, adamnan ğonuşurken bağırmağa gerek yoh. Bizde derler: Tatlı dil ilanı deliğinnen çıharır. Yani gözel söz söylersen en ters adam bele yumuşar.",
+      "metin_erkek": "Hele bah, ğaba ğonuşmahnan iş çıhmaz. Bizim büyüklerimiz derdi: Tatlı dil ilanı deliğinnen çıharır. Demeh ki gönül ğazanmağın yolu tatlı dildir.",
+      "dogrulandi": false
+    },
+    {
+      "id": "06",
+      "tur": "atasözü",
+      "soz_sive": "Ayağını yorğanına göre uzat.",
+      "soz_standart": "Ayağını yorganına göre uzat.",
+      "anlam": "Harcamanı gelirine göre yap; gücünün yetmediği işe girişme.",
+      "ornek": "Borca girme oğul, ayağını yorğanına göre uzat.",
+      "metin_kadin": "Bacım, evin hesabını bilen ğadın şunu bilir: Ayağını yorğanına göre uzat. Yani ne ğadar ğazanırsan o ğadar harca, borca girme.",
+      "metin_erkek": "Dadaş, yorğanın ğısa ise ayağın açıhta ğalır, ğış gecesi üşürsen. Ondan derler: Ayağını yorğanına göre uzat. Gücün neye yetirse onu yap, fazlasına heves etme.",
+      "dogrulandi": false
+    },
+    {
+      "id": "07",
+      "tur": "atasözü",
+      "soz_sive": "Bir elin nesi var, iki elin sesi var.",
+      "soz_standart": "Bir elin nesi var, iki elin sesi var.",
+      "anlam": "Tek başına yapılamayan işler birlik ve yardımlaşmayla başarılır.",
+      "ornek": "Gel, beraber kaldıralım; bir elin nesi var, iki elin sesi var.",
+      "metin_kadin": "Bizde tandır ekmeği yapılanda ğonşu ğadınlar hep beraber oturar. Neden? Çünkü bir elin nesi var, iki elin sesi var. Yani birlik olursan iş de ğolaylaşır, gönül de şenlenir.",
+      "metin_erkek": "Hele bah dadaş, tek başına damın ğarını küreyemezsen. Ondan derler: Bir elin nesi var, iki elin sesi var. Yani el ele verenin işi görülür.",
+      "dogrulandi": false
+    },
+    {
+      "id": "08",
+      "tur": "atasözü",
+      "soz_sive": "Üzüm üzüme baha baha ğararır.",
+      "soz_standart": "Üzüm üzüme baka baka kararır.",
+      "anlam": "İnsan birlikte olduğu kişilerden etkilenir, onların huyunu alır.",
+      "ornek": "Kiminnen gezdiğine dihgat et; üzüm üzüme baha baha ğararır.",
+      "metin_kadin": "Gadanı alım, uşağın arkadaşına dihgat et. Bizde derler: Üzüm üzüme baha baha ğararır. Yani kiminnen gezersen onun huyunu ğaparsan.",
+      "metin_erkek": "Dadaş, adam arkadaşınnan bellü olur. Derler ki: Üzüm üzüme baha baha ğararır. Eyi adamnan otur ki sen de eyi olasan.",
+      "dogrulandi": false
+    },
+    {
+      "id": "09",
+      "tur": "atasözü",
+      "soz_sive": "Dost ğara günde bellü olur.",
+      "soz_standart": "Dost kara günde belli olur.",
+      "anlam": "Gerçek dost, insanın zor gününde yanında olandır.",
+      "ornek": "Hastalandığımda gelen o oldu; dost ğara günde bellü olur.",
+      "metin_kadin": "Bacım, düğünde herkes gelir; ama derdin olanda ğapını çalan ğaç ğişi olir? Ondan derler: Dost ğara günde bellü olur. Yani zor gününde yanında duran, işte o senin dostundur.",
+      "metin_erkek": "Dadaş, eyi günde dost çoh olur. Ama bizde derler: Dost ğara günde bellü olur. Başına iş gelende yanında duran, işte o senin gardaşındır.",
+      "dogrulandi": false
+    },
+    {
+      "id": "10",
+      "tur": "atasözü",
+      "soz_sive": "Sabır acıdır, meyvası şirindir.",
+      "soz_standart": "Sabır acıdır, meyvesi tatlıdır.",
+      "anlam": "Beklemek ve katlanmak zordur ama sonunda güzel sonuç verir.",
+      "ornek": "Acele etme; sabır acıdır, meyvası şirindir.",
+      "metin_kadin": "Gadanı alım, aceleynen iş olmaz. Bizim nenemler derdi: Sabır acıdır, meyvası şirindir. Yani beklemesi zor gelir, ama sonu tatlı olur.",
+      "metin_erkek": "Hele bah dadaş, ağac bir günde meyve vermez. Ondan derler: Sabır acıdır, meyvası şirindir. Sabreden derviş muradına erer.",
+      "dogrulandi": false
+    },
+    {
+      "id": "11",
+      "tur": "atasözü",
+      "soz_sive": "Emeh olmadan yemeh olmaz.",
+      "soz_standart": "Emek olmadan yemek olmaz.",
+      "anlam": "Çalışmadan kazanç elde edilmez.",
+      "ornek": "Kalk, işe başla; emeh olmadan yemeh olmaz.",
+      "metin_kadin": "Bacım, tandırın başına oturmadan ekmeh pişmez. Bizde derler: Emeh olmadan yemeh olmaz. Yani çalışmayan ğazanmaz.",
+      "metin_erkek": "Dadaş, tarlayı sürmeyen harman görmez. Ondan derler: Emeh olmadan yemeh olmaz. Alın terinnen ğazanılan ekmeh en tatlısıdır.",
+      "dogrulandi": false
+    },
+    {
+      "id": "12",
+      "tur": "atasözü",
+      "soz_sive": "Ne ekersen onu biçersen.",
+      "soz_standart": "Ne ekersen onu biçersin.",
+      "anlam": "İnsan yaptığı iyiliğin ya da kötülüğün karşılığını görür.",
+      "ornek": "Kimseye kötülük etme; ne ekersen onu biçersen.",
+      "metin_kadin": "Gadanı alım, eyilih et, denize at. Çünkü ne ekersen onu biçersen. Yani kime ne yaparsan, bir gün o sana döner.",
+      "metin_erkek": "Hele bah dadaş, tarlaya buğday ekersen buğday biçersen. Adamın işi de bele: Ne ekersen onu biçersen. Eyilih eden eyilih bulur.",
+      "dogrulandi": false
+    },
+    {
+      "id": "13",
+      "tur": "atasözü",
+      "soz_sive": "İşleyen demir ışıldar.",
+      "soz_standart": "İşleyen demir ışıldar.",
+      "anlam": "Çalışan, kendini geliştiren insan parlar; boş duran paslanır.",
+      "ornek": "Okumayı bırakma; işleyen demir ışıldar.",
+      "metin_kadin": "Bacım, el boş durmaz, boş duran el paslanır. Bizde derler: İşleyen demir ışıldar. Yani çalışan adamın yüzü de, ğalbi de parlar.",
+      "metin_erkek": "Dadaş, demircinin ğapısında görmüşsen; işlenen demir parlar, atılan paslanır. Ondan derler: İşleyen demir ışıldar. Çalış ki adın parlasın.",
+      "dogrulandi": false
+    },
+    {
+      "id": "14",
+      "tur": "atasözü",
+      "soz_sive": "Az veren cannan, çoh veren mallan.",
+      "soz_standart": "Az veren candan, çok veren maldan.",
+      "anlam": "İmkânı az olanın verdiği az şey, varlıklının verdiği çoktan değerlidir; önemli olan gönülden vermektir.",
+      "ornek": "Getirdiği bir tas çorba başımın üstüne; az veren cannan, çoh veren mallan.",
+      "metin_kadin": "Gadanı alım, ğonşum bir tas çorba getirse başım üstüne goyaram. Çünkü az veren cannan, çoh veren mallan. Yani ğıymetli olan gönülden vermehtir.",
+      "metin_erkek": "Hele bah dadaş, fuhara adamın bir lohması, zenginin bir ğazanınnan ğıymetlidir. Ondan derler: Az veren cannan, çoh veren mallan.",
+      "dogrulandi": false
+    },
+    {
+      "id": "15",
+      "tur": "atasözü",
+      "soz_sive": "Yuvayı dişi ğuş yapar.",
+      "soz_standart": "Yuvayı dişi kuş yapar.",
+      "anlam": "Evi yuva yapan, düzenini kuran ve sürdüren kadındır.",
+      "ornek": "Gelin geldi, ev şenlendi; yuvayı dişi ğuş yapar.",
+      "metin_kadin": "Bacım, evin düzeni, sofranın bereketi ğadının elindedir. Ondan derler: Yuvayı dişi ğuş yapar. Yani evi ev yapan anadır.",
+      "metin_erkek": "Dadaş, ben bütün gün dışarıda çalışıram, ama evin direği anamızdır. Bizde derler: Yuvayı dişi ğuş yapar. Hanımın ğadrini bil.",
+      "dogrulandi": false
+    },
+    {
+      "id": "16",
+      "tur": "atasözü",
+      "soz_sive": "Dağ dağa ğovuşmaz, adam adama ğovuşur.",
+      "soz_standart": "Dağ dağa kavuşmaz, insan insana kavuşur.",
+      "anlam": "İnsanlar bir gün yeniden karşılaşabilir; kimseye kötülük etmemeli, ayrılanlar umudunu kesmemelidir.",
+      "ornek": "Ağlama, yine görüşeceğiz; dağ dağa ğovuşmaz, adam adama ğovuşur.",
+      "metin_kadin": "Gadanı alım, gurbete gidenin arhasınnan su dökerih, ağlamarıh. Çünkü dağ dağa ğovuşmaz, adam adama ğovuşur. Yani bir gün yine ğovuşacağıh.",
+      "metin_erkek": "Dadaş, kimseyi ğırma, kimseye kötülüh etme. Bizde derler: Dağ dağa ğovuşmaz, adam adama ğovuşur. Bir gün yine yüz yüze gelirsiz.",
+      "dogrulandi": false
+    },
+    {
+      "id": "17",
+      "tur": "atasözü",
+      "soz_sive": "Söz ola kese savaşı, söz ola kestire başı.",
+      "soz_standart": "Söz ola kese savaşı, söz ola kestire başı.",
+      "anlam": "Söz kavgayı da bitirebilir, büyük felakete de yol açabilir; konuşurken dikkatli olmalıdır. (Yunus Emre'nin dizesinden atasözüne geçmiştir.)",
+      "ornek": "Sözünü tartarak söyle; söz ola kese savaşı, söz ola kestire başı.",
+      "metin_kadin": "Bacım, ağızdan çıhan söz geri gelmez. Yunus Emre de demiş: Söz ola kese savaşı, söz ola kestire başı. Yani bir söz barış getirir, bir söz ğavga.",
+      "metin_erkek": "Hele bah dadaş, sözünü tartmadan söyleme. Derler ki: Söz ola kese savaşı, söz ola kestire başı. Akıllı adam önce düşünür, sonra söyler.",
+      "dogrulandi": false
+    },
+    {
+      "id": "18",
+      "tur": "atasözü",
+      "soz_sive": "Ağac yaşken eğilir.",
+      "soz_standart": "Ağaç yaşken eğilir.",
+      "anlam": "Eğitim küçük yaşta verilmelidir; büyüyünce huy kolay değişmez.",
+      "ornek": "Uşağa şindiden öğret; ağac yaşken eğilir.",
+      "metin_kadin": "Gadanı alım, uşağa terbiye küçüklühte verilir. Bizde derler: Ağac yaşken eğilir. Yani büyüdühten sonra ğolay ğolay değişmez.",
+      "metin_erkek": "Dadaş, ğurumuş ağacı eğmeye ğalhsan ğırılır. Ondan derler: Ağac yaşken eğilir. Evladını küçükken eyi yetiştir.",
+      "dogrulandi": false
+    },
+    {
+      "id": "19",
+      "tur": "atasözü",
+      "soz_sive": "Atın ölümü arpadan olsun.",
+      "soz_standart": "Atın ölümü arpadan olsun.",
+      "anlam": "Hoşa giden, keyifli bir şey uğruna zarara katlanmaya razı olmak.",
+      "ornek": "Bir porsiyon cağ kebabı daha; atın ölümü arpadan olsun.",
+      "metin_kadin": "Bacım, ğaymağı, balı görende dayanamıram. Derim ki: Atın ölümü arpadan olsun. Yani hoşuma giden şeyin zararına da razıyam.",
+      "metin_erkek": "Hele bah dadaş, cağ kebabının başına oturdun mu hesap tutulmaz. Derler ki: Atın ölümü arpadan olsun. Yani sevdiğin şey uğruna zararı göze alırsan.",
+      "dogrulandi": false
+    },
+    {
+      "id": "20",
+      "tur": "atasözü",
+      "soz_sive": "Dadaşın sözü senettir.",
+      "soz_standart": "Dadaşın sözü senettir.",
+      "anlam": "Erzurumlu (dadaş) verdiği sözü tutar; söz yazılı belge kadar bağlayıcıdır. (Yöresel söyleyiş.)",
+      "ornek": "Kağıda gerek yok, söz verdim; dadaşın sözü senettir.",
+      "metin_kadin": "Gadanı alım, bizim erkehlerimiz söz verdi mi geri dönmez. Ondan derler: Dadaşın sözü senettir. Yani verilen söz, kağıda yazılmış gibi bağlayıcıdır.",
+      "metin_erkek": "Hele bah, ben sana söz verdimse bitti dadaş. Bizde derler: Dadaşın sözü senettir. Kağıda, imzaya gerek yoh; söz namustur.",
+      "dogrulandi": false
+    },
+    {
+      "id": "21",
+      "tur": "deyim",
+      "soz_sive": "Gadanı alım.",
+      "soz_standart": "Kadanı alayım.",
+      "anlam": "\"Senin derdini, belanı ben alayım\"; sevgi, şefkat ve rica bildiren yöresel söz.",
+      "ornek": "Gadanı alım, bir bardah su ver.",
+      "metin_kadin": "Bizde en çoh duyacağın söz budur: Gadanı alım. Yani senin derdini, belanı ben alayım. Ana evladına der, bacı gardaşına der; sevginin, şefkatin sözüdür.",
+      "metin_erkek": "Dadaş, Erzurum'a gelirsen her ğapıda duyarsan: Gadanı alım. Demeh ki senin bütün derdin, gadan bana gelsin. Bir şey rica ederken de söylerih.",
+      "dogrulandi": false
+    },
+    {
+      "id": "22",
+      "tur": "deyim",
+      "soz_sive": "Başına dönem.",
+      "soz_standart": "Başına döneyim.",
+      "anlam": "\"Etrafında dönüp kurban olayım\"; derin sevgi ve hayranlık bildiren yöresel söz.",
+      "ornek": "Başına dönem ğızım, ne gözel olmuşsan.",
+      "metin_kadin": "Torunum yanıma gelende derim ki: Başına dönem. Yani senin etrafında dönüp kurban olayım. Bizde sevginin en derin sözüdür.",
+      "metin_erkek": "Hele bah dadaş, anam beni görende hep der: Başına dönem oğul. Yani sana kurban olayım demehtir; sevgiden söylenir.",
+      "dogrulandi": false
+    },
+    {
+      "id": "23",
+      "tur": "deyim",
+      "soz_sive": "Ayaz paşa ğol gezir.",
+      "soz_standart": "Ayaz paşa kol geziyor.",
+      "anlam": "Hava çok soğuk; dondurucu bir ayaz var.",
+      "ornek": "Galın giyin, ayaz paşa ğol gezir.",
+      "metin_kadin": "Bacım, ğalın giyin, çıhma dışarı; ayaz paşa ğol gezir. Yani hava ğırılır, buz gibi soğuh var.",
+      "metin_erkek": "Dadaş, Erzurum'un ğış gecesinde derih: Ayaz paşa ğol gezir. Yani soğuh, paşa gibi sohahları dolaşır, burnun donar.",
+      "dogrulandi": false
+    },
+    {
+      "id": "24",
+      "tur": "deyim",
+      "soz_sive": "Ağzı süd ğohir.",
+      "soz_standart": "Ağzı süt kokuyor.",
+      "anlam": "Çok genç, toy, tecrübesiz.",
+      "ornek": "O daha ağzı süd ğohan bir uşahtır.",
+      "metin_kadin": "Gadanı alım, o daha uşahtır, ağzı süd ğohir. Yani daha çoh gençtir, dünyayı bilmez.",
+      "metin_erkek": "Hele bah dadaş, ağzı süd ğohan biri bize akıl verir. Daha toy, tecrübesiz adama bele derih.",
+      "dogrulandi": false
+    },
+    {
+      "id": "25",
+      "tur": "deyim",
+      "soz_sive": "Gözü toh.",
+      "soz_standart": "Gözü tok.",
+      "anlam": "Kanaatkâr; başkasının malında gözü olmayan.",
+      "ornek": "Bizim gelin gözü toh bir ğızdır.",
+      "metin_kadin": "Bacım, bizim gelin gözü toh bir ğızdır. Yani kimsenin malında gözü yoh, elindekine şükreder.",
+      "metin_erkek": "Dadaş, gözü toh adamdan zarar gelmez. Gözü toh demeh, ğanaatkâr, haris olmayan adam demehtir.",
+      "dogrulandi": false
+    },
+    {
+      "id": "26",
+      "tur": "deyim",
+      "soz_sive": "Eli açıh.",
+      "soz_standart": "Eli açık.",
+      "anlam": "Cömert, ikram etmeyi seven.",
+      "ornek": "Erzurumlunun eli açıhtır, sofrasınnan kimse aç ğalhmaz.",
+      "metin_kadin": "Gadanı alım, Erzurumlunun eli açıhtır. Yani cömerttir, sofrasınnan kimseyi aç ğaldırmaz.",
+      "metin_erkek": "Hele bah dadaş, eli açıh adam ğazandığını paylaşır. Ona cömert derler; ğapısı da, sofrası da herkese açıhtır.",
+      "dogrulandi": false
+    },
+    {
+      "id": "27",
+      "tur": "deyim",
+      "soz_sive": "Ğulah asmamah.",
+      "soz_standart": "Kulak asmamak.",
+      "anlam": "Söyleneni önemsememek, dinlememek.",
+      "ornek": "Ğaç defa söyledim, söze ğulah asmir.",
+      "metin_kadin": "Bacım, ğaç defa söyledim, bu uşah söze ğulah asmir. Yani dinlemir, umursamir.",
+      "metin_erkek": "Dadaş, boş sözlere ğulah asma. Yani her duyduğunu ciddiye alma, önemseme.",
+      "dogrulandi": false
+    },
+    {
+      "id": "28",
+      "tur": "deyim",
+      "soz_sive": "Burnunnan ğıl aldırmaz.",
+      "soz_standart": "Burnundan kıl aldırmaz.",
+      "anlam": "Çok gururlu; kimseden söz kaldırmayan.",
+      "ornek": "O adam burnunnan ğıl aldırmaz, ğonuşma onnan.",
+      "metin_kadin": "Gadanı alım, o ğadın burnunnan ğıl aldırmaz. Yani çoh gururludur, kimsenin sözünü götürmez.",
+      "metin_erkek": "Hele bah, o adam burnunnan ğıl aldırmaz dadaş. Yani kendini çoh büyük görür, kimseye boyun eğmez.",
+      "dogrulandi": false
+    },
+    {
+      "id": "29",
+      "tur": "deyim",
+      "soz_sive": "Ağzı var, dili yoh.",
+      "soz_standart": "Ağzı var, dili yok.",
+      "anlam": "Çok sessiz, uysal; kendini savunamayan kimse.",
+      "ornek": "Ona bağırma, ağzı var dili yoh bir uşahtır.",
+      "metin_kadin": "Bacım, bizim gelin ağzı var dili yoh bir ğızdır. Yani çoh sessizdir, hahkını bele istemeyi bilmez.",
+      "metin_erkek": "Dadaş, ağzı var dili yoh adamın hahkını yemeh günahtır. Yani sessiz, kendini savunamayan adama bele derler.",
+      "dogrulandi": false
+    },
+    {
+      "id": "30",
+      "tur": "deyim",
+      "soz_sive": "Ğış ğıyamet.",
+      "soz_standart": "Kış kıyamet.",
+      "anlam": "Kar, tipi ve ayazla gelen çok sert kış havası.",
+      "ornek": "Dışarısı ğış ğıyamet, yollar ğapandı.",
+      "metin_kadin": "Gadanı alım, dışarısı ğış ğıyamet, yollar ğapandı. Yani ğar, tipi, ayaz bir arada; ğıyamet ğopmuş gibi.",
+      "metin_erkek": "Hele bah dadaş, ğış ğıyamet gelmeden tandırın odununu hazırla. Çoh sert, tipili ğış günlerine bele derih.",
+      "dogrulandi": false
+    }
+  ]
+}

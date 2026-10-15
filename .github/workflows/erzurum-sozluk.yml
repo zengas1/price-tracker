@@ -1,0 +1,52 @@
+name: Erzurum Sozluk - Ses ve QR
+
+# Sozluk verisi degisince eksik sesleri (edge-tts: kadin tr-TR-EmelNeural,
+# erkek tr-TR-AhmetNeural) ve QR kodlarini uretip ayni dala commit eder.
+# Var olan ses dosyalarinin uzerine yazmaz; gercek kayitlar korunur.
+# Tum sesleri yeniden uretmek icin workflow_dispatch'te "force" sec.
+
+on:
+  push:
+    paths:
+      - "erzurum-sozluk/data/**"
+      - "erzurum-sozluk/tools/**"
+      - ".github/workflows/erzurum-sozluk.yml"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Var olan sesleri de yeniden uret"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install edge-tts qrcode
+
+      - name: Generate audio
+        run: python erzurum-sozluk/tools/ses_uret.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Generate QR codes
+        run: python erzurum-sozluk/tools/qr_uret.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add erzurum-sozluk/ses erzurum-sozluk/qr
+          if ! git diff --cached --quiet; then
+            git commit -m "Erzurum sozluk: ses ve QR dosyalarini uret"
+            git pull --rebase
+            git push
+          fi
