@@ -1,0 +1,21 @@
+{
+ "stopaj": {
+  "mevduat": [
+   {"gun_ust": 182, "oran": 17.5, "etiket": "6 aya kadar"},
+   {"gun_ust": 365, "oran": 15, "etiket": "1 yıla kadar"},
+   {"gun_ust": null, "oran": 10, "etiket": "1 yıldan uzun"}
+  ],
+  "fon": 17.5,
+  "gecerlilik": "2026-12-31",
+  "not": "Gerçek kişiler için TL mevduat ve para piyasası fonu stopaj oranları. Mevduat oranları 9 Temmuz 2025'ten beri geçerli; 20.06.2026 tarihli Resmi Gazete'deki 11444 sayılı Cumhurbaşkanı Kararı ile 31.12.2026'ya kadar uzatıldı. Bu bölüm elle tutulur; oranlar değişince güncelleyin."
+ },
+ "politika_faizi": {
+  "oran": 36.0,
+  "tarih": "2026-10-22",
+  "kaynak": "TCMB PPK kararı",
+  "url": "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Temel+Faaliyetler/Para+Politikasi/Merkez+Bankasi+Faiz+Oranlari/1+Hafta+Repo"
+ },
+ "mevduat": null,
+ "fonlar": null,
+ "durum": {}
+}

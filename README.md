@@ -87,3 +87,7 @@ Bunu GitHub Actions'a (ücretsiz bulut) taşımayı denedik, ancak Trendyol GitH
 ## Erzurum Yaşayan Sözlük
 
 Bu depoda ayrıca QR kodla açılan, kadın ve erkek sesli bir Erzurum atasözü/deyim sözlüğü de bulunuyor: [`erzurum-sozluk/`](erzurum-sozluk/README.md).
+
+## Faiz Getiri Hesaplama
+
+Tutar ve gün girerek banka mevduatı ya da para piyasası fonlarında ne kadar kazanılacağını güncel oranlarla hesaplayan sayfa; oranlar her gün GitHub Actions ile güncellenir: [`faiz-hesaplama/`](faiz-hesaplama/README.md).

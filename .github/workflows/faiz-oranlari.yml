@@ -1,20 +1,57 @@
 name: Faiz Oranlari - Guncelle
 
+# Her sabah TEFAS para piyasasi fonu fiyatlarini, banka mevduat oranlarini ve
+# TCMB politika faizini cekip faiz-hesaplama/data/oranlar.json'a yazar ve
+# commit eder. Bir kaynak alinamazsa o bolumun onceki verisi korunur ve is
+# akisi kirmizi gorunur. Zamanlanmis calisma yalnizca varsayilan dalda (main)
+# olur; elle calistirmak icin Actions sekmesinde "Run workflow".
+
 on:
-  push:
-    branches-ignore: [main]
-    paths:
-      - "faiz-hesaplama/tools/**"
-      - ".github/workflows/faiz-oranlari.yml"
+  schedule:
+    - cron: "41 5 * * *"   # her gun 08:41 (Turkiye saati)
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: faiz-oranlari
+
 jobs:
-  incele:
+  guncelle:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
+
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - run: pip install requests
-      - run: python faiz-hesaplama/tools/kaynak_incele.py
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Test parsers
+        run: python -m unittest discover -s faiz-hesaplama/tools
+
+      - name: Fetch rates
+        id: guncelle
+        continue-on-error: true
+        run: python faiz-hesaplama/tools/oranlari_guncelle.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add faiz-hesaplama/data/oranlar.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Faiz oranlarini guncelle"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Fail if a source could not be fetched
+        if: steps.guncelle.outcome == 'failure'
+        run: |
+          echo "Bazi kaynaklar alinamadi; ayrintilar 'Fetch rates' adiminda. Sayfa o bolumler icin onceki veriyi gosterir."
+          exit 1

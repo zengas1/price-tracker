@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faiz Getiri Hesaplama</title>
+  <meta name="description" content="Banka mevduatı ve para piyasası fonlarında paranızın seçtiğiniz sürede ne kadar kazandıracağını güncel oranlarla hesaplayın.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="kap">
+    <header class="ust">
+      <h1>Faiz Getiri Hesaplama</h1>
+      <p>Paranızı bankada vadeli mevduatta ya da bir para piyasası fonunda tutarsanız seçtiğiniz sürede ne kadar kazanırsınız? Oranlar her gün otomatik güncellenir.</p>
+      <p id="veri-durum" class="veri-durum">Oranlar yükleniyor…</p>
+    </header>
+
+    <section class="kart giris" aria-label="Hesaplama bilgileri">
+      <div class="alanlar">
+        <div class="alan">
+          <label for="tutar">Tutar</label>
+          <div class="girdi"><input id="tutar" inputmode="decimal" autocomplete="off" value="100.000"><span>TL</span></div>
+          <div class="hizli" data-hedef="tutar">
+            <button type="button" data-deger="50000">50 bin</button>
+            <button type="button" data-deger="100000">100 bin</button>
+            <button type="button" data-deger="500000">500 bin</button>
+            <button type="button" data-deger="1000000">1 milyon</button>
+          </div>
+        </div>
+        <div class="alan">
+          <label for="gun">Süre</label>
+          <div class="girdi"><input id="gun" type="number" min="1" max="3650" inputmode="numeric" value="32"><span>gün</span></div>
+          <div class="hizli" data-hedef="gun">
+            <button type="button" data-deger="32">1 ay</button>
+            <button type="button" data-deger="92">3 ay</button>
+            <button type="button" data-deger="181">6 ay</button>
+            <button type="button" data-deger="365">1 yıl</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sekmeler" role="tablist" aria-label="Yatırım türü">
+        <button type="button" role="tab" data-tur="mevduat" aria-selected="true">Mevduat</button>
+        <button type="button" role="tab" data-tur="fon" aria-selected="false">Para piyasası fonu</button>
+        <button type="button" role="tab" data-tur="ozel" aria-selected="false">Kendi oranım</button>
+      </div>
+
+      <div class="secim" data-panel="mevduat">
+        <div class="alan genis">
+          <label for="banka">Banka</label>
+          <select id="banka"></select>
+        </div>
+        <div class="alan">
+          <label for="oran-elle">Yıllık faiz</label>
+          <div class="girdi"><span>%</span><input id="oran-elle" inputmode="decimal" autocomplete="off"></div>
+          <small>Bankanın size verdiği oran farklıysa yazın.</small>
+        </div>
+      </div>
+      <div class="secim" data-panel="fon" hidden>
+        <div class="alan genis">
+          <label for="fon">Fon</label>
+          <select id="fon"></select>
+        </div>
+      </div>
+      <div class="secim" data-panel="ozel" hidden>
+        <div class="alan">
+          <label for="ozel-oran">Yıllık faiz</label>
+          <div class="girdi"><span>%</span><input id="ozel-oran" inputmode="decimal" autocomplete="off" value="40"></div>
+        </div>
+        <div class="alan">
+          <label for="ozel-stopaj">Stopaj</label>
+          <div class="girdi"><span>%</span><input id="ozel-stopaj" inputmode="decimal" autocomplete="off" placeholder="vadeye göre"></div>
+          <small>Boş bırakırsanız mevduat stopajı uygulanır.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="sonuc" class="kart sonuc" aria-live="polite"></section>
+
+    <section class="karsilastir" aria-labelledby="karsilastir-baslik">
+      <div class="karsilastir-ust">
+        <h2 id="karsilastir-baslik">Tüm seçenekler</h2>
+        <div class="filtre" role="group" aria-label="Seçenekleri süz">
+          <button type="button" data-filtre="hepsi" aria-pressed="true">Hepsi</button>
+          <button type="button" data-filtre="mevduat" aria-pressed="false">Mevduat</button>
+          <button type="button" data-filtre="fon" aria-pressed="false">Fonlar</button>
+        </div>
+      </div>
+      <p id="karsilastir-ozet" class="not"></p>
+      <ol id="siralama" class="siralama"></ol>
+    </section>
+
+    <details class="kart ayarlar">
+      <summary>Hesap ayarları</summary>
+      <div class="ayar">
+        <label class="kutu"><input type="checkbox" id="yenile" checked>
+          Mevduatı 32 günlük vadelerle yenile (bileşik)</label>
+        <small>Süre 32 günden uzunsa her vade sonunda net faiz ana paraya eklenir. Kapalıysa tek vade gibi hesaplanır.</small>
+      </div>
+      <fieldset class="ayar">
+        <legend>Banka oranı aralık olarak verildiyse</legend>
+        <label class="kutu"><input type="radio" name="banka-orani" value="max" checked> En yüksek oranı kullan</label>
+        <label class="kutu"><input type="radio" name="banka-orani" value="min"> En düşük oranı kullan</label>
+        <small>En yüksek oran genelde kampanya, yeni müşteri ya da belli tutar şartına bağlıdır.</small>
+      </fieldset>
+      <fieldset class="ayar">
+        <legend>Fon getirisi tahmini</legend>
+        <label class="kutu"><input type="radio" name="pencere" value="7"> Son 7 günün hızıyla</label>
+        <label class="kutu"><input type="radio" name="pencere" value="30" checked> Son 30 günün hızıyla</label>
+        <label class="kutu"><input type="radio" name="pencere" value="91"> Son 3 ayın hızıyla</label>
+      </fieldset>
+      <fieldset class="ayar stopaj">
+        <legend>Stopaj (gelir vergisi kesintisi)</legend>
+        <label>Mevduat, 6 aya kadar <span class="girdi"><span>%</span><input id="stopaj-0" inputmode="decimal"></span></label>
+        <label>Mevduat, 1 yıla kadar <span class="girdi"><span>%</span><input id="stopaj-1" inputmode="decimal"></span></label>
+        <label>Mevduat, 1 yıldan uzun <span class="girdi"><span>%</span><input id="stopaj-2" inputmode="decimal"></span></label>
+        <label>Para piyasası fonu <span class="girdi"><span>%</span><input id="stopaj-fon" inputmode="decimal"></span></label>
+        <small id="stopaj-not"></small>
+        <button type="button" class="dugme" id="stopaj-sifirla">Güncel oranlara dön</button>
+      </fieldset>
+    </details>
+
+    <footer class="not alt-bilgi">
+      <p>Sonuçlar tahmindir, yatırım tavsiyesi değildir. Banka oranları tutara, vadeye ve müşteri durumuna göre değişir; kesin oranı bankanızdan öğrenin. Fon tahmini, fonun yakın geçmişteki getirisinin aynen süreceğini varsayar. Faiz kararları değiştikçe fon getirileri de değişir.</p>
+      <p id="kaynaklar"></p>
+    </footer>
+  </main>
+  <script src="assets/hesap.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
